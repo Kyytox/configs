@@ -1,0 +1,17 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+
+*.vscode-insiders/
+*/miniconda3/
+Miniconda3
+
+snap/
+!.cache/
+*/.pgadmin/
+
