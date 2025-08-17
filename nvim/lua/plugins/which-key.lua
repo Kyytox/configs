@@ -63,6 +63,7 @@ return {
 				{ "<leader>p", group = "Pane" },
 				{ "<leader>t", group = "Terminal" },
 				{ "<leader>g", group = "Git" },
+				{ "<leader>d", group = "Debug" },
 				{ "<leader>c", group = "Snacks" },
 				{ "<leader>u", group = "Ui" },
 				{ "<leader>n", group = "Noice" },

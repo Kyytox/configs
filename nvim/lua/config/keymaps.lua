@@ -4,6 +4,9 @@
 
 local keymap = vim.keymap
 
+-- Delete key SHIFT j (delete row above)
+keymap.set("n", "J", "<nop>")
+
 keymap.set("n", "<PageDown>", "20j", { noremap = true })
 keymap.set("n", "<PageUp>", "20k", { noremap = true })
 
@@ -16,8 +19,12 @@ keymap.set("n", "<TAB>", ">>", { noremap = true, silent = true, desc = "Next com
 keymap.set("n", "<S-TAB>", "<<", { noremap = true, silent = true, desc = "Next completion item" })
 
 -- Return to first caractere not blank of the line
-keymap.set("n", "<HOME>", "^^", { noremap = true, silent = true, desc = "Return to first non-blank character" })
 keymap.set("v", "<HOME>", "^^", { noremap = true, silent = true, desc = "Return to first non-blank character" })
+keymap.set("v", "<HOME>", "^^", { noremap = true, silent = true, desc = "Return to first non-blank character" })
+
+-- return start of line in normal mode
+keymap.set("n", "à", "0", { noremap = true, silent = true, desc = "Start of Line" })
+keymap.set("v", "à", "0", { noremap = true, silent = true, desc = "Start of Line" })
 
 -- Configuration des touches pour toggleterm
 keymap.set("n", "<F4>", "<cmd>ToggleTerm<cr>", { desc = "Toggle floating terminal" })
