@@ -14,24 +14,26 @@ return {
 			-- sort = { "group" },
 			-- sort = { "alphanum" },
 			-- sort = { "order" },
-			sort = { "mod" },
+			sort = { "alphanum" },
 			icons = {
-				-- rules = false,
 				separator = "➜",
 				group = "+",
 			},
-			show_keys = false,
+			show_keys = true,
 			show_help = false, -- show a help message in the command line for using WhichKey
 			layout = {
 				align = "center",
-				-- height = { min = 10, max = 35 },
-				-- width = { min = 20, max = 70 },
+			},
+			plugins = {
+				spelling = {
+					enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+					suggestions = 40, -- how many suggestions should be shown in the list?
+				},
 			},
 			win = {
 				border = "rounded",
 				title = true,
-				--margin = { 1, 0, 1, 0 },
-				padding = { 1, 1 }, -- extra window padding [top/bottom, right/left]
+				padding = { 1, 1 },
 				no_overlap = true,
 			},
 
@@ -47,13 +49,18 @@ return {
 				{ "<leader>7", hidden = true },
 				{ "<leader>8", hidden = true },
 				{ "<leader>9", hidden = true },
+				{ "<leader>/", hidden = true }, -- Grep Live
+				{ "<leader>:", hidden = true }, -- Commands history
+				{ "<leader>`", hidden = true }, -- Switch other buffers
+				{ "<leader>S", hidden = true }, -- Select scratch buffer
+				{ "<leader>D", hidden = true }, -- Open DBUI
+				-- { "gc", hidden = true }, -- Comment toggle line
 
-				--
 				-- { "<leader>H", hidden = true },
 			}),
 
 			wk.add({
-				{ "<leader>e", desc = "Exporer" },
+				{ "<leader>e", group = "Explorer" },
 				{ "<leader>f", group = "Telescope" },
 				{ "<leader>a", group = "Ai" },
 				{ "<leader>s", group = "Sessions" },
@@ -64,11 +71,22 @@ return {
 				{ "<leader>t", group = "Terminal" },
 				{ "<leader>g", group = "Git" },
 				{ "<leader>d", group = "Debug" },
-				{ "<leader>c", group = "Snacks" },
+				{ "<leader>c", group = "Code" },
 				{ "<leader>u", group = "Ui" },
 				{ "<leader>n", group = "Noice" },
 				{ "<leader>q", group = "Quit/Session" },
 				{ "<leader><TAB>", group = "Tabs" },
+			}),
+
+			wk.add({
+				{ "gr", group = "References" },
+				-- { "grd", desc = "Go to Definition" },
+				-- { "grD", desc = "Go to Declaration" },
+				-- { "grr", desc = "List References" },
+				-- { "gri", desc = "List Implementations" },
+				-- { "grO", desc = "Document Symbols" },
+				-- { "grn", desc = "Rename" },
+				-- { "grt", desc = "Type Definition" },
 			}),
 
 			wk.add({
