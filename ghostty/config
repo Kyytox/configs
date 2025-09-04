@@ -1,7 +1,9 @@
 # Apparance
 background-opacity = 0.95
 theme = Argonaut
-font-family = Ubuntu Sans Mono Light
+font-family = "monospace"
+# font-family = "Nimbus Mono"
+
 font-size = 11
 cursor-style = block
 cursor-style-blink = false
