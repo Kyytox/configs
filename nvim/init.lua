@@ -6,3 +6,6 @@ vim.lsp.enable("pyright")
 vim.cmd([[
   highlight WinSeparator guibg=#0b0f15 guifg=#C40A0A
 ]])
+
+local opt = vim.opt
+opt.wrap = true

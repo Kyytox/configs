@@ -12,7 +12,7 @@ return {
 						hidden = true,
 						layout = {
 							preset = "default",
-							preview = false,
+							preview = true,
 						},
 						actions = {
 							copy_file_path = {
