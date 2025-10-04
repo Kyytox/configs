@@ -1,3 +1,10 @@
-# configs
+# Configs for Workspace
 
-configs for my wokspace..
+- Nvim (LayzVim)
+- Ghostty
+- Tmux Terminal
+- Moonlander Kayboard
+
+## Requirements
+
+- Node.js (v20 or later)
